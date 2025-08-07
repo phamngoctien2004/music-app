@@ -1,0 +1,36 @@
+<div class="container-sidebar scroll-hidden">
+  <div class="sidebar h-1/1">
+
+    <div [ngClass]="isClose ? 'control-close':'control'">
+
+      @if (!isClose){
+        <div class="control mt-[10px]!">
+          <span class="material-symbols-outlined">library_music</span>
+          <span class="control-text">Playlists</span>
+          <span class="material-symbols-outlined ml-[10px]! add-hover font-normal!">add</span>
+        </div>
+      }
+      <span class="material-symbols-outlined pointer cursor-pointer text-[32px]! mt-[10px]!" (click)="toogle()">
+        {{ isClose ? 'right_panel_close' : 'left_panel_close' }}
+      </span>
+      @if (isClose){
+        <span class="material-symbols-outlined mt-[10px]! add-hover">add</span>
+      }
+
+
+    </div>
+    <div class="mt-5! playlists">
+      <app-play-item [isClose]="isClose"></app-play-item>
+      <app-play-item [isClose]="isClose"></app-play-item>
+      <app-play-item [isClose]="isClose"></app-play-item>
+      <app-play-item [isClose]="isClose"></app-play-item>
+      <app-play-item [isClose]="isClose"></app-play-item>
+      <app-play-item [isClose]="isClose"></app-play-item>
+      <app-play-item [isClose]="isClose"></app-play-item>
+      <app-play-item [isClose]="isClose"></app-play-item>
+      <app-play-item [isClose]="isClose"></app-play-item>
+
+    </div>
+
+  </div>
+</div>

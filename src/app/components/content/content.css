@@ -1,0 +1,8 @@
+:host{
+  padding: 10px 10px 10px 0;
+}
+.main{
+  background: var(--primary-black);
+  height: 100%;
+  border-radius: 6px;
+}

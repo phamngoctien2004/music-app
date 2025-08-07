@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+app-root, app-sidebar, app-home, app-play, app-content{
+  display: block;
+  height: 100%;
+}
+
+:root{
+  --primary-green: #1ED760;
+  --primary-black: #121212;
+  --hightlight: #1f1f1f;
+
+}
+
+body{
+  display: block;
+  height: 100%;
+  width: 100%;
+  min-height: 600px;
+  min-width: 1240px;
+  overflow: hidden;
+  background: #000;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.p-menu {
+  background: #282828 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, .3), 0 6px 8px rgba(0, 0, 0, .2) !important;
+  border: none !important;
+}
+.p-menu-item-label{
+  color: hsla(0, 0%, 100%, .9) !important;
+  font-size:14px !important;
+  font-weight: 600 !important;
+}
+.p-menu-item:not(.p-disabled) .p-menu-item-content:hover {
+  color: hsla(0, 0%, 100%, .9) !important;
+  background: hsla(0, 0%, 100%, .1) !important;
+}

@@ -1,0 +1,63 @@
+:host{
+  display: block;
+  height: 100%;
+  padding: 10px;
+
+}
+.container-sidebar{
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+
+}
+.sidebar{
+  background-color: var(--primary-black);
+  transition: all 0.3s ease !important;
+
+}
+.content{
+
+}
+.control{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0px 10px;
+}
+.control-close{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.control-text{
+  margin-left: 10px;
+  font-weight: 600;
+}
+.material-icons{
+  font-size: 32px;
+}
+
+.add-hover{
+  border-radius: 50% !important;
+  padding:10px !important;
+}
+.add-hover:hover{
+  background: var(--hightlight);
+}
+.playlists{
+  background: var(--primary-black);
+  padding: 5px;
+  border-radius: 6px;
+}
+.scroll-hidden {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
