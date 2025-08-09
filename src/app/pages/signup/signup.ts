@@ -36,6 +36,7 @@ export class Signup {
   email: string = '';
   birth: String ='';
   gender: String = '';
+  name: String = '';
   signup(){
     console.log("sign")
   }

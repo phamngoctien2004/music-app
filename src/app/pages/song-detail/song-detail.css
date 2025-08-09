@@ -1,0 +1,116 @@
+.container-song-detail{
+
+}
+:host{
+  padding: 10px 10px 10px 0;
+}
+.main{
+  background: var(--primary-black);
+  height: 100%;
+  border-radius: 6px;
+  overflow: auto;
+  scrollbar-width: thin; /* Firefox */
+}
+
+.song-avatar{
+  width: 230px;
+  height: 230px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.song-header{
+  height: 270px;
+  width: 100%;
+  padding:20px;
+  display: flex;
+  background: linear-gradient( #183848FF ,#284858FF);
+
+}
+.song-header-info{
+}
+.artist-avatar{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.song-header-detail {
+  display: flex;
+}
+.song-header-detail span{
+  margin: 0 5px
+}
+.asdf{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.play-btn{
+  width:55px;
+  height:55px;
+  font-size: 20px;
+  background: var(--primary-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.1s;
+}
+.play-btn:hover{
+  background: #3ae477;
+  transform: scale(1.05);
+}
+.more{
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.lyrics{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/*giới hạn số dòng hiển thị*/
+.clamp{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 12;
+  overflow: hidden;
+}
+.expanded .clamp{ -webkit-line-clamp: unset; }
+
+
+.artist{
+  margin-left: 150px;
+}
+.artist-avatar-big{
+  width:80px;
+  height:80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.items{
+
+}
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:10px 20px;
+  margin: 20px 0 ;
+}
+.item:hover{
+  background: var(--hightlight);
+  border-radius: 6px;
+}
+.item-info{
+  display: flex;
+  align-items: center;
+}
+.item-info img{
+  width:50px;
+  height:50px;
+  border-radius: 6px;
+  margin: 0 15px;
+}

@@ -85,9 +85,10 @@
                   <label for="name" class="font-[700]! text-sm! text-white!">Name</label>
                   <input type="text" pInputText id="name" class="form-input mb-[7px]!" placeholder="Peter 97"
                          name="name" required
-                         [(ngModel)]="email"
+                         [(ngModel)]="name"
                          #nameModel="ngModel"/>
-                  @if (nameModel.invalid && nameModel.touched && nameModel.errors?.['required']) {
+                  @if ((f.submitted && nameModel.invalid && nameModel.touched && nameModel.errors?.['required'])
+                    || (f.submitted && !name)) {
                     <div class="input-error">
                     <span class="material-symbols-outlined input-error">
                       info
@@ -103,7 +104,8 @@
                                 #birthModel="ngModel"/>
 
 
-                  @if (birthModel.invalid && birthModel.touched && birthModel.errors?.['required']) {
+                  @if ((birthModel.invalid && birthModel.touched && birthModel.errors?.['required'])
+                    || (f.submitted && !birth)) {
                     <div class="input-error">
                     <span class="material-symbols-outlined input-error">
                       info

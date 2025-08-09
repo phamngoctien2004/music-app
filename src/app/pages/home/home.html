@@ -7,7 +7,7 @@
     <app-sidebar (isCloseEmitted)="handleSidebarToggle($event)"></app-sidebar>
   </div>
   <div class="content h-19/24" [ngClass]="isClose ? 'w-12/13' : 'w-4/5'" style="transition: all 0.2s ease;">
-    <app-content></app-content>
+    <app-song-detail></app-song-detail>
   </div>
 
   <!--  </div>-->
