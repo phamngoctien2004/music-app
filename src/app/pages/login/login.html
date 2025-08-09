@@ -1,0 +1,40 @@
+<div class="container-login text-white!">
+  <div class="main">
+    <div class="google-login">
+      <div class="w-1/2">
+        <div class="header-login">
+          <img src="logo.svg" class="spotify-logo">
+          <h1 class="text-3xl font-bold!">Log in to Spotify</h1>
+        </div>
+        <a class="btn-google-login" href="/">
+          <img src="assets/logo/google.png" alt="Google Logo" class="google-logo mr-[40px]!">
+          <span class="font-[700]!">Continue with google</span>
+        </a>
+      </div>
+
+    </div>
+    <div class="split">
+      <hr>
+    </div>
+    <div class="login">
+      <form class="w-1/2">
+        <div class="form-group">
+          <label for="email" class="font-[700]! text-sm!">Email or username</label>
+          <input type="text" pInputText id="email" class="form-input" placeholder="Email or username"/>
+        </div>
+        <div class="form-group">
+          <label for="password" class="font-[700]! text-sm!">Password</label>
+          <p-password [toggleMask]="true" id="password" />
+        </div>
+        <button type="submit" class="btn-login">Log In</button>
+
+        <div class="register-link">
+          <span class="text-second">Don't Have an account?</span>
+          <a href="/" class="text-hover"> Sign up for Spotify</a>
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+</div>
