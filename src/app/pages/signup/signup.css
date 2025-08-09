@@ -1,0 +1,59 @@
+.btn-login{
+  background: var(--primary-green);
+  color:#000;
+  font-weight: 700;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 19932px;
+  transition: 0.2s;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  cursor: pointer;
+
+}
+.btn-login:hover{
+  background: #3ae477;
+}
+.container-signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(0, 0, 0) 100%);
+}
+.signup{
+  width: 80%;
+  height: 100%;
+}
+.abcd{
+  width:400px;
+  height: 700px;
+  background-color: #121212;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+.spotify-logo{
+  width:40px;
+  height:40px;
+}
+.header-login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.text-signup{
+  max-width: 200px;
+  text-align: center;
+}
+.link-to-login{
+  text-align: center;
+}
+.radio{
+  width:15px !important;
+  height: 15px !important;
+}

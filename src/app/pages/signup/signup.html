@@ -1,1 +1,143 @@
-<p>signup works!</p>
+<div class="container-signup">
+  <div class="abcd">
+    <form class="signup" (ngSubmit)="signup()" #f="ngForm">
+
+      <p-stepper [(value)]="activeStep" class="basis-[40rem]">
+        <p-step-panels>
+          <p-step-panel [value]="emailStep()">
+
+            <ng-template #content let-activateCallback="activateCallback">
+              <div class="header-login">
+                <img src="logo.svg" class="spotify-logo">
+                <h1 class="text-3xl font-bold! text-white! text-signup">Sign up to start listening</h1>
+              </div>
+              <div class="form-group">
+                <label for="email" class="font-[700]! text-sm! text-white!">Email or username</label>
+                <input type="text" pInputText id="email" class="form-input mb-[7px]!" placeholder="name@example.com"
+                       name="email" required
+                       [(ngModel)]="email"
+                       #emailModel="ngModel"/>
+                @if (emailModel.invalid && emailModel.touched && emailModel.errors?.['required']) {
+                  <div class="input-error">
+                    <span class="material-symbols-outlined input-error">
+                      info
+                    </span>
+                    Please enter your Spotify username or email address.
+                  </div>
+                }
+              </div>
+              <button class="btn-login" type="button" (click)="activateCallback(2)">Next</button>
+              <div class="link-to-login">
+                <span class="text-second">Already have an account?</span>
+                <a routerLink="/login" class="text-hover text-white!"> Log in for Spotify</a>
+              </div>
+            </ng-template>
+          </p-step-panel>
+
+          <p-step-panel [value]="passwordStep()">
+            <ng-template #content let-activateCallback="activateCallback">
+              <div class="step-info text-white!">
+                <div class="flex-align">
+                   <span class="material-symbols-outlined" (click)="activateCallback(1)">
+                     arrow_back
+                  </span>
+                  <span class="text-primary ml-[10px]!">
+                    Create a password
+                  </span>
+
+                </div>
+                <div class="form-group">
+                  <label for="password" class="font-[700]! text-sm!">Password</label>
+                  <p-password [toggleMask]="true" id="password" placeholder="**********"
+                              pattern="(?=.*[A-Za-z])(?=.*\d)\S{8,}"
+                              name="password" required [(ngModel)]="password" #fPassword="ngModel"
+                  />
+                </div>
+                @if (fPassword.invalid && fPassword.touched) {
+                  <div class="input-error">
+                    <span class="material-symbols-outlined input-error">
+                      info
+                    </span>
+                    @if (fPassword.errors?.['pattern']){
+                      Password must be at least 8 characters long and contain at least one letter and one number.
+                    } @else if (fPassword.errors?.['required']) {
+                      Please enter a password.
+                    }
+                  </div>
+                }
+                <button class="btn-login" type="button" (click)="activateCallback(3)">Next</button>
+              </div>
+            </ng-template>
+          </p-step-panel>
+
+          <p-step-panel [value]="doneStep()">
+            <ng-template #content let-activateCallback="activateCallback">
+              <div class="flex-align">
+                   <span class="material-symbols-outlined" (click)="activateCallback(2)">
+                     arrow_back
+                  </span>
+                <span class="text-primary ml-[10px]!">
+                    Tell us about yourself
+                  </span>
+              </div>
+              <div>
+                <div class="form-group">
+                  <label for="name" class="font-[700]! text-sm! text-white!">Name</label>
+                  <input type="text" pInputText id="name" class="form-input mb-[7px]!" placeholder="Peter 97"
+                         name="name" required
+                         [(ngModel)]="email"
+                         #nameModel="ngModel"/>
+                  @if (nameModel.invalid && nameModel.touched && nameModel.errors?.['required']) {
+                    <div class="input-error">
+                    <span class="material-symbols-outlined input-error">
+                      info
+                    </span>
+                      Enter a name for your profile.
+                    </div>
+                  }
+                </div>
+                <div class="form-group">
+                  <label for="name" class="font-[700]! text-sm! text-white!">Date of birth</label>
+                  <p-input-mask mask="99-99-9999" [(ngModel)]="birth" placeholder="09/11/2004"
+                                name="birth" id="birth" class="form-input mb-[7px]!" required
+                                #birthModel="ngModel"/>
+
+
+                  @if (birthModel.invalid && birthModel.touched && birthModel.errors?.['required']) {
+                    <div class="input-error">
+                    <span class="material-symbols-outlined input-error">
+                      info
+                    </span>
+                      Enter your birth date
+                    </div>
+                  }
+                </div>
+                <div class="form-group">
+                  <label class="font-[700]! text-sm! text-white!">Gender</label>
+                  <div class="">
+                    <input type="radio" name="radio" value="MALE" [(ngModel)]="gender" class="radio"/>
+                    <span class="mr-[20px]! ml-[10px]!">Male</span>
+                    <input type="radio" name="radio" value="FEMALE" [(ngModel)]="gender" class="radio"/>
+                    <span class=" ml-[10px]!">Female</span>
+                  </div>
+
+                  @if (f.submitted && !gender) {
+                    <div class="input-error">
+                    <span class="material-symbols-outlined input-error">
+                      info
+                    </span>
+                      Select your gender
+                    </div>
+                  }
+                </div>
+              </div>
+              <button class="btn-login" type="submit">Sign up</button>
+            </ng-template>
+          </p-step-panel>
+        </p-step-panels>
+      </p-stepper>
+    </form>
+
+  </div>
+
+</div>

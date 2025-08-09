@@ -74,6 +74,8 @@ hr{
   transition: 0.2s;
   margin-top: 30px;
   margin-bottom: 40px;
+  cursor: pointer;
+
 }
 .btn-login:hover{
   background: #3ae477;
