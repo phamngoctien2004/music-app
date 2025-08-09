@@ -41,3 +41,43 @@ body{
   color: hsla(0, 0%, 100%, .9) !important;
   background: hsla(0, 0%, 100%, .1) !important;
 }
+.material-symbols-outlined, .symbol{
+  color: #B3B3B3;
+  cursor: pointer;
+}
+.material-symbols-outlined:hover, .symbol:hover{
+  color: #ffff !important;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-song{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.text-song-small{
+  color: #B3B3B3;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.text-song-bold{
+
+}
+.p-dialog{
+  background: var(--primary-black) !important;
+  border: 1px solid #282828 !important;
+}
+.text-green{
+  color: var(--primary-green)
+}
+.text{
+  transition: 0.2s;
+}
+.text:hover{
+  color: var(--primary-green) !important;
+}

@@ -2,15 +2,16 @@
   <div class="menu w-1/1 h-1/12">
     <app-menu></app-menu>
   </div>
-  <div class="sidebar h-10/12" [ngClass]="isClose ? 'w-1/13' : 'w-1/5'" style="transition: all 0.2s ease;">
+
+  <div class="sidebar h-19/24" [ngClass]="isClose ? 'w-1/13' : 'w-1/5'" style="transition: all 0.2s ease;">
     <app-sidebar (isCloseEmitted)="handleSidebarToggle($event)"></app-sidebar>
   </div>
-  <div class="content h-10/12" [ngClass]="isClose ? 'w-12/13' : 'w-4/5'" style="transition: all 0.2s ease;">
+  <div class="content h-19/24" [ngClass]="isClose ? 'w-12/13' : 'w-4/5'" style="transition: all 0.2s ease;">
     <app-content></app-content>
   </div>
 
   <!--  </div>-->
-  <div class="play h-1/12 w-1/1">
+  <div class="play h-4/24 w-1/1">
     <app-play></app-play>
   </div>
 </div>

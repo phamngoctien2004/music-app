@@ -20,6 +20,12 @@ img{
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+  transition: 0.4s;
+}img:hover{
+  transform: scale(1.1);
+}
+.image-container{
+  overflow: hidden;
 }
 .menu-main{
   display: flex;
@@ -48,12 +54,16 @@ img{
   color: #ffff;
 }
 .btn-explore{
-  color:#000;
-  background: #fff;
+  color: hsla(0, 0%, 100%, .9) !important;
+  background: var(--hightlight);
   padding:6px 12px;
   font-weight: bold;
   border-radius: 12px;
   font-size: 16px;
+  transition: 0.3s;
+}
+.btn-explore:hover{
+  background: var(--primary-green);
 }
 .p-menu-item-label{
   font-size: 16px;
