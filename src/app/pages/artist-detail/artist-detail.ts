@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-artist-detail',
   imports: [],
   templateUrl: './artist-detail.html',
+  standalone: true,
   styleUrl: './artist-detail.css'
 })
 export class ArtistDetail {

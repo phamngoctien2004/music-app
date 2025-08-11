@@ -7,12 +7,22 @@
     <app-sidebar (isCloseEmitted)="handleSidebarToggle($event)"></app-sidebar>
   </div>
   <div class="content h-19/24" [ngClass]="isClose ? 'w-12/13' : 'w-4/5'" style="transition: all 0.2s ease;">
-    <app-song-detail></app-song-detail>
+    <app-song-detail [isPlaying]="playerStore.isPlaying()" (toggleRequested)="handleToggle()"></app-song-detail>
   </div>
 
   <!--  </div>-->
   <div class="play h-4/24 w-1/1">
-    <app-play></app-play>
+    <app-play [isPlaying]="playerStore.isPlaying()"
+              [isMuted]="playerStore.isMuted()"
+              [currentTime]="playerStore.currentTime()"
+              [duration]="playerStore.duration()"
+              [progress]="playerStore.progress()"
+              [volume]="playerStore.volume()"
+              (toggleRequested)="handleToggle()"
+              (seekRequested)="handleSeek($event)"
+              (volumeRequested)="handleVolume($event)"
+              (toggleMuteRequested)="handleMute()"
+    ></app-play>
   </div>
 </div>
 

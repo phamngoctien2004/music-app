@@ -1,0 +1,34 @@
+<div class="song-header" [style.background]="backgroundColor">
+  <img src="https://i.scdn.co/image/ab67616d00001e02a1bc26cdd8eecd89da3adc39" alt="" class="song-avatar">
+  <div class="asdf">
+    <div class="h-1/5"></div>
+    <div class="song-header-info">
+      <div class="text-song-semibold">Song</div>
+      <div class="big-title">Chúng ta không thuộc về nhau</div>
+      <div class="song-header-detail">
+        <img src="https://i.scdn.co/image/ab6761610000e5eb5a79a6ca8c60e4ec1440be53" class="artist-avatar">
+        <span class="text-primary">Sơn tùng M-TP</span>
+        <span class="text-second">2024</span>
+        <span class="text-second">3:53</span>
+        <span class="text-second">54,530,921</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="play-more">
+  <div class="py-[20px]! ml-[20px]! flex-align ">
+    @if (isPlaying()){
+      <i class="fa-solid fa-pause cursor-pointer play-btn" (click)="toggleRequested.emit()"></i>
+
+    } @else {
+      <i class="fa-solid fa-play cursor-pointer play-btn" (click)="toggleRequested.emit()"></i>
+
+    }
+    <span class="material-symbols-outlined more">
+            page_control
+          </span>
+  </div>
+</div>
+

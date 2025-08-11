@@ -1,15 +1,22 @@
-import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, input, output, ViewChild} from '@angular/core';
+import {Header} from '../../components/header/header';
 
 @Component({
   selector: 'app-song-detail',
-  imports: [],
+  imports: [
+    Header
+  ],
   templateUrl: './song-detail.html',
   standalone: true,
   styleUrl: './song-detail.css'
 })
 export class SongDetail {
-
+  isPlaying = input<boolean>(false);
+  toggleRequested = output<void>();
   expanded = false;
+  ontoggle() {
+
+  }
   lyrics= "Về về về nơi này\n" +
     "Chúng ta không thuộc về nhau\n" +
     "Chúng ta không thuộc về\n" +

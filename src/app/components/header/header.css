@@ -1,0 +1,49 @@
+.song-header{
+  width: 100%;
+  padding:20px;
+  display: flex;
+  background: linear-gradient( #183848FF ,#284858FF);
+  height: 270px;
+}.artist-avatar{
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
+ }
+.song-avatar{
+  width: 230px;
+  height: 230px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.song-header-detail {
+  display: flex;
+}
+.song-header-detail span{
+  margin: 0 5px
+}
+.asdf{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.play-btn{
+  width:55px;
+  height:55px;
+  font-size: 20px;
+  background: var(--primary-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.1s;
+}
+.play-btn:hover{
+  background: #3ae477;
+  transform: scale(1.05);
+}
+.more{
+  font-size: 40px;
+  margin-left: 20px;
+}
+
