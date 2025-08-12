@@ -44,7 +44,7 @@ export class PlayerStore {
       this.audio.currentTime = 0;
     }
     console.log('okplay')
-    await this.play();
+    // await this.play();
   }
 
   async play() {

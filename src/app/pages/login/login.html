@@ -18,13 +18,16 @@
     </div>
     <div class="login">
       <form class="w-1/2" (ngSubmit)="onSubmit()" #f="ngForm">
+        @if (isLoginFailed){
+
+        }
         <div class="form-group">
           <label for="email" class="font-[700]! text-sm!">Email or username</label>
           <input type="text" pInputText id="email" class="form-input mb-[7px]!" placeholder="Email or username"
           name="email" required
-          [(ngModel)]="email"
+          [(ngModel)]="request.email"
           #emailModel="ngModel"/>
-          @if (emailModel.invalid && emailModel.touched && emailModel.errors?.['required']){
+          @if ((emailModel.invalid && emailModel.touched && emailModel.errors?.['required']) || (f.submitted && f.invalid)){
             <div class="input-error">
               <span class="material-symbols-outlined input-error">
                 info
@@ -35,9 +38,9 @@
         </div>
         <div class="form-group">
           <label for="password" class="font-[700]! text-sm!">Password</label>
-          <p-password [toggleMask]="true" id="password" />
+          <p-password [toggleMask]="true" id="password" [(ngModel)]="request.password" name="password"/>
         </div>
-        <button type="submit" class="btn-login">Log In</button>
+        <button type="submit" class="btn-login" [disabled]="f.invalid">Log In</button>
 
         <div class="register-link">
           <span class="text-second">Don't Have an account?</span>
@@ -49,3 +52,4 @@
 
   </div>
 </div>
+<p-toast></p-toast>
