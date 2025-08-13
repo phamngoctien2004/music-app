@@ -4,9 +4,11 @@ export const API = {
     AUTH: {
       LOGIN: '/auth/login',
       REGISTER: '/auth/register',
+      GOOGLE_URL: '/auth/google-link',
+      GOOGLE_LOGIN: '/auth/google-login',
     },
     USER: {
-      ME: '/user/me'
+      ME: '/users/me'
     }
   }
 

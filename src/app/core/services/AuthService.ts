@@ -13,4 +13,10 @@ export class AuthService{
   public login(request: AuthRequest): Observable<AuthResponse> {
     return this.http.post<AuthResponse>(API.URL + API.ENDPOINT.AUTH.LOGIN, request);
   }
+  public loginGoogle(code: string): Observable<AuthResponse>{
+    return this.http.post<AuthResponse>(API.URL + API.ENDPOINT.AUTH.GOOGLE_LOGIN, {code});
+  }
+  public getGoogleLoginUrl(): Observable<string>{
+    return this.http.get<string>(API.URL + API.ENDPOINT.AUTH.GOOGLE_URL, {responseType: 'text' as 'json'});
+  }
 }

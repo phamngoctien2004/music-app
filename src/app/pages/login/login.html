@@ -6,7 +6,7 @@
           <img src="logo.svg" class="spotify-logo">
           <h1 class="text-3xl font-bold!">Log in to Spotify</h1>
         </div>
-        <a class="btn-google-login" href="/">
+        <a class="btn-google-login cursor-pointer" (click)="redirectGoogleLogin()">
           <img src="assets/logo/google.png" alt="Google Logo" class="google-logo mr-[40px]!">
           <span class="font-[700]!">Continue with google</span>
         </a>
@@ -18,9 +18,7 @@
     </div>
     <div class="login">
       <form class="w-1/2" (ngSubmit)="onSubmit()" #f="ngForm">
-        @if (isLoginFailed){
 
-        }
         <div class="form-group">
           <label for="email" class="font-[700]! text-sm!">Email or username</label>
           <input type="text" pInputText id="email" class="form-input mb-[7px]!" placeholder="Email or username"

@@ -7,6 +7,7 @@ import {Content} from '../../components/content/content';
 import {NgClass} from '@angular/common';
 import {SongDetail} from '../song-detail/song-detail';
 import {PlayerStore} from '../../core/stores/PlayerStore';
+import {UserService} from '../../core/services/UserService';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,11 @@ import {PlayerStore} from '../../core/stores/PlayerStore';
 export class Home {
   isClose: boolean = false;
 
-  playerStore = inject(PlayerStore)
+  constructor(protected playerStore: PlayerStore,private userService: UserService) {
+  }
+  async ngOnInit() {
+    await this.playerStore.loadAndPlay(this.trackUrl[0].url);
+  }
   trackUrl = [
     {url: 'assets/mp3/chungtakhongthuocvenhau.mp3'}
   ];
@@ -29,9 +34,7 @@ export class Home {
     this.playerStore.toggle();
     console.log("play")
   }
-  async ngOnInit() {
-    await this.playerStore.loadAndPlay(this.trackUrl[0].url);
-  }
+
   async playTrack(url: string){
     await this.playerStore.loadAndPlay(url);
   }
